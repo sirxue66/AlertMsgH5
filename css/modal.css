@@ -1,0 +1,58 @@
+.mask{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1999;
+}
+.modalContainer{
+    position: fixed;
+    z-index: 2000;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 25px;
+    box-shadow: 0 4px 12px #00000026;
+}
+.topMain{
+    min-height: 60px;
+    padding-bottom: 15px;
+    display: flex;
+}
+.icon_modal{
+    height: var(--maxH);
+    width: var(--maxW);
+}
+.textContent{
+    padding: 5px;
+    font-size: 16px;
+    min-width: 200px;
+}
+.botMain{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.btn{
+    width: 64px;
+    height: 32px;
+    border-radius: 2px;
+    box-shadow: 0 2px #00000004;
+    color: #000000d9;
+    font-size: 14px;
+    border: 1px solid transparent;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.btn1{
+    border-color: #d9d9d9;
+}
+.btn2{
+    border-color: #1890ff;
+    background: #1890ff;
+    color: #ffffff;
+}

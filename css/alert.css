@@ -1,0 +1,43 @@
+.alertContainer{
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100vw;
+    z-index: 1999;
+    pointer-events: none;
+}
+.alertBox{
+    position: relative;
+    min-height: 40px;
+    width: 300px;
+    font-size: 14px;
+    color: #000000d9;
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+.infoBox{
+    background: var(--info);
+    border: 1px solid var(--infoBorder);
+}
+.successBox{
+    background: var(--success);
+    border: 1px solid var(--successBorder);
+}
+.warningBox{
+    background: var(--warning);
+    border: 1px solid var(--warningBorder);
+}
+.errorBox{
+    background: var(--error);
+    border: 1px solid var(--errorBorder);
+}
+.plainBox{
+    box-shadow: 0 4px 12px #00000026;
+}
+.alertIcon{
+    height: var(--minH);
+    width: var(--minW);
+    margin: 0 10px;
+}
