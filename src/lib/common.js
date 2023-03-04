@@ -42,26 +42,35 @@ export const makeSpan = (content, className) => {
  * @param {*} uuid 
  * @returns 
  */
-export const mount = (dom, uuid, containerID) => {
-    let last = document.getElementById(uuid)
-    let container = document.getElementById(containerID)
+export const mount = (dom, lastId, containerDom) => {
+    let last = document.getElementById(lastId)
     if(last instanceof Element){
-        container.insertBefore(dom, last)
+        containerDom.insertBefore(dom, last)
         return
     }
-    container.appendChild(dom)
+    containerDom.appendChild(dom)
 }
 /**
  * 关闭提示
  * @param {*} dom 
  * @param {*} daly 
  */
-export const remove = (dom, containerID, delay = 3000) => {
+export const remove = (dom, containerDom, delay = 3000) => {
     if(delay === 0) return
-    let container = document.getElementById(containerID)
     setTimeout(() => {
-        container.removeChild(dom)
+        containerDom.removeChild(dom)
     },delay)
+}
+
+/**
+ * 根据id移除dom
+ * @param {*} containerID 
+ * @param {*} id 
+ */
+export const removeById = (containerID ,id) => {
+    const container = document.getElementById(containerID)
+    const child = document.getElementById(id)
+    container.replaceChild(child)
 }
 
 /**

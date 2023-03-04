@@ -1,43 +1,53 @@
-.alertContainer{
+.msg_alertContainer{
     position: fixed;
     top: 10px;
     left: 0;
     width: 100vw;
-    z-index: 1999;
+    z-index: 1000;
     pointer-events: none;
+    box-sizing: border-box;
 }
-.alertBox{
+.msg_alertBox{
     position: relative;
-    min-height: 40px;
+    min-height: 20px;
     width: 300px;
     font-size: 14px;
-    color: #000000d9;
     display: flex;
-    align-items: center;
+    align-items: start;
     margin: 10px auto;
     border-radius: 2px;
+    padding: 5px;
 }
-.infoBox{
+.msg_alertSpan{
+    display: inline-block;
+    max-width: 260px;
+    word-wrap: normal;
+    word-break: break-all;
+    white-space: normal;
+}
+.msg_infoBox{
     background: var(--info);
     border: 1px solid var(--infoBorder);
 }
-.successBox{
+.msg_successBox{
     background: var(--success);
     border: 1px solid var(--successBorder);
 }
-.warningBox{
+.msg_warningBox{
     background: var(--warning);
     border: 1px solid var(--warningBorder);
 }
-.errorBox{
+.msg_errorBox{
     background: var(--error);
     border: 1px solid var(--errorBorder);
 }
-.plainBox{
+.msg_plainBox{
+    background: #ffffff;
     box-shadow: 0 4px 12px #00000026;
 }
-.alertIcon{
+.msg_alertIcon{
     height: var(--minH);
     width: var(--minW);
-    margin: 0 10px;
+    margin: 0 5px;
 }
+

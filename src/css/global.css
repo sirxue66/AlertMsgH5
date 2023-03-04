@@ -1,4 +1,4 @@
-:root{
+.msg_alertContainer{
     --info: #e6f7ff;
     --infoBorder: #91d5ff;
     --success: #f6ffed;
@@ -7,8 +7,14 @@
     --warningBorder: #ffe58f;
     --error: #fff2f0;
     --errorBorder: #ffccc7;
-    --minH: 20px;
-    --minW: 20px;
-    --maxH: 30px;
-    --maxW: 30px;
+    --minH: 18px;
+    --minW: 18px;
+}
+.msg_notificationContainer{
+    --maxH: 25px;
+    --maxW: 25px;
+}
+.msg_confirmContainer{
+    --maxH: 25px;
+    --maxW: 25px;
 }

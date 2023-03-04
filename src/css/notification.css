@@ -1,0 +1,57 @@
+.msg_notificationContainer{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+    z-index: 1000;
+    /* pointer-events: none; */
+    box-sizing: border-box;
+}
+.msg_notificationBox{
+    position: relative;
+    max-width: 360px;
+    min-width: 260px;
+    padding: 15px 20px;
+    margin: 15px 0;
+    background: #ffffff;
+    box-shadow: 0 4px 12px #00000026;
+    overflow: hidden;
+    display: flex;
+}
+.msg_notificationIcon{
+    height: var(--maxH);
+    width: var(--maxW);
+}
+.msg_leftDom{
+    flex: 1;
+    text-align: center;
+    min-height: 65px;
+}
+.msg_rightDom{
+    flex: 9;
+}
+.msg_topDom{
+    position: relative;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.msg_topTitle{
+    font-size: 16px;
+
+}
+.msg_closeIcon{
+    height: var(--maxH);
+    width: var(--maxW);
+    cursor: pointer;
+}
+.msg_bottomDom{
+    padding: 10px;
+}
+.msg_bottom_content{
+    font-size: 14px;
+    width: 100%;
+    word-wrap: normal;
+    word-break: break-all;
+}

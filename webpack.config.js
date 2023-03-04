@@ -11,7 +11,7 @@ module.exports = {
         //     type: 'umd',
         //   },
     },
-    mode: "production",
+    mode: "development",
     stats: "errors-only",
     devServer: {
         port: 8001,
