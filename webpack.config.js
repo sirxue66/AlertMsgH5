@@ -2,7 +2,7 @@ const path = require("path")
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: "./index.js",
+    entry: "./test.js",
     output: {
         path: path.resolve(__dirname, "build"),
         filename: "alertmsgh5.min.js",
@@ -20,6 +20,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            title: "AlertMsgH5",
             template: "./index.html"
         })
     ],
