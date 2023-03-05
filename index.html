@@ -7,17 +7,44 @@
     <title>AlertMsgH5</title>
 </head>
 <body>
-    <button id="add">增加</button>
+    <h2>alert</h2>
+    <button id="info">消息</button>
+    <button id="success">成功</button>
+    <button id="warning">警告</button>
+    <button id="error">错误</button>
+    <button id="plain">简洁</button>
+    <h2>confirm</h2>
+    <button id="infoC">消息通知</button>
+    <button id="successC">成功通知</button>
+    <button id="warningC">警告通知</button>
+    <button id="errorC">错误通知</button>
+    <button id="plainC">简洁通知</button>
+    <h2>notification</h2>
+    <button id="open">弹框</button>
 </body>
+
+<!-- ----------------------------- -->
 <!-- <script src="./build/alertmsgh5.min.js"></script>
 <script>
     console.log(window.AlertMsgH5)
-    AlertMsgH5.creatMSG() //挂载组件
+    AlertMsgH5.creatMSG("$ALERTMSG") //挂载组件
     console.log(window)
-    const {success, info} = $ALERTMSG.alert
-    document.getElementById("add").onclick = () => {
-        success()
+    const {success, info, warning, error, plain} = $ALERTMSG.alert
+    const {open} = $ALERTMSG.confirm
+    document.getElementById("info").onclick = () => {
         info()
+    }
+    document.getElementById("success").onclick = () => {
+        success()
+    }
+    document.getElementById("warning").onclick = () => {
+        warning()
+    }
+    document.getElementById("error").onclick = () => {
+        error()
+    }
+    document.getElementById("plain").onclick = () => {
+        plain()
     }
 </script> -->
 </html>

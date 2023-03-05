@@ -2,17 +2,18 @@
     position: fixed;
     top: 0;
     right: 0;
-    margin-right: 20px;
     z-index: 1000;
     /* pointer-events: none; */
     box-sizing: border-box;
+    overflow: hidden;
 }
 .msg_notificationBox{
     position: relative;
-    max-width: 360px;
-    min-width: 260px;
+    /* max-width: 360px; */
+    width: 260px;
     padding: 15px 20px;
     margin: 15px 0;
+    margin-right: 20px;
     background: #ffffff;
     box-shadow: 0 4px 12px #00000026;
     overflow: hidden;

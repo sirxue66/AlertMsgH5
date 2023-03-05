@@ -55,11 +55,28 @@ export const mount = (dom, lastId, containerDom) => {
  * @param {*} dom 
  * @param {*} daly 
  */
-export const remove = (dom, containerDom, delay = 3000) => {
+const animationTime = 500
+export const remove = (dom, containerDom, delay = 3000, flag) => {
     if(delay === 0) return
     setTimeout(() => {
-        containerDom.removeChild(dom)
-    },delay)
+        flag==="alert" && removeAnimation_alert(dom)
+        flag==="notif" && removeAnimation_notif(dom)
+        setTimeout(() => {
+            dom.parentNode && containerDom.removeChild(dom)
+        },animationTime)
+    },delay-animationTime)
+}
+
+/**
+ * 触发dom离开动画
+ */
+const removeAnimation_alert = (dom) => {
+    dom.classList.remove("msg_alert_enter")
+    dom.classList.add("msg_alert_leave")
+}
+const removeAnimation_notif = (dom) => {
+    dom.classList.remove("msg_notif_enter")
+    dom.classList.add("msg_notif_leave")
 }
 
 /**

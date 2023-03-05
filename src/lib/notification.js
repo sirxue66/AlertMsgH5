@@ -1,7 +1,7 @@
 import "../css/notification.css"
 import "../css/global.css"
 import {infoIcon, successIcon, warningIcon, errorIcon, closeIcon} from "../icon/icon.js"
-import {makeIcon, mount, remove, makeUUID, makeSpan, makeContainer, removeById} from "./common"
+import {makeIcon, mount, remove, makeUUID, makeSpan, makeContainer} from "./common"
 const containerId = makeUUID()
 let lastUUID = null
 let containerDom
@@ -9,7 +9,7 @@ const makeNotification = ( svg, title, content, delay) => {
     containerDom = makeContainer(containerId, "msg_notificationContainer")
     const div = document.createElement("div")
     let uuid = makeUUID()
-    div.classList.add("msg_notificationBox")
+    div.classList.add("msg_notificationBox", "msg_notif_enter")
     div.id=uuid
     // 左侧图标
     if(svg){
@@ -36,10 +36,10 @@ const makeNotification = ( svg, title, content, delay) => {
     contentDom.appendChild(topDom)
     contentDom.appendChild(bottomDom)
     div.appendChild(contentDom)
-    lastUUID = uuid
     mount(div, lastUUID, containerDom)
     addEvent(topClose, div)
-    remove(div, containerDom, delay)
+    remove(div, containerDom, delay, "notif")
+    lastUUID = uuid
 }
 
 const addEvent = (icon, child) => {

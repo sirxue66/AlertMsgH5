@@ -6,19 +6,19 @@ const containerId = makeUUID()
 let lastUUID = null
 let containerDom
 
-const makeAlert = (className, svg, content, delay) => {
+const makeAlert = (className, svg, content, delay = 3000) => {
     containerDom = makeContainer(containerId, "msg_alertContainer")
     const div = document.createElement("div")
     let uuid = makeUUID()
-    div.classList.add("msg_alertBox",className)
+    div.classList.add("msg_alertBox", "msg_alert_enter", className)
     div.id=uuid
     const icon = makeIcon(svg, "msg_alertIcon")
     const span = makeSpan(content, "msg_alertSpan")
     div.appendChild(icon)
     div.appendChild(span)
-    lastUUID = uuid
     mount(div, lastUUID, containerDom)
-    remove(div, containerDom, delay)
+    remove(div, containerDom, delay, "alert")
+    lastUUID = uuid
 }
 
 function info(content="普通提示", delay){

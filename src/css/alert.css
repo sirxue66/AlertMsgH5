@@ -1,11 +1,12 @@
 .msg_alertContainer{
     position: fixed;
-    top: 10px;
+    top: 0;
     left: 0;
     width: 100vw;
     z-index: 1000;
     pointer-events: none;
     box-sizing: border-box;
+    overflow: hidden;
 }
 .msg_alertBox{
     position: relative;
@@ -50,4 +51,5 @@
     width: var(--minW);
     margin: 0 5px;
 }
+
 
