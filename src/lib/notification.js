@@ -1,10 +1,6 @@
 import "../css/notification.css"
 import "../css/global.css"
-import infoSvg from "../icon/info.svg"
-import successSvg from "../icon/success.svg"
-import warningSvg from "../icon/warning.svg"
-import errorSvg from "../icon/error.svg"
-import closeSvg from "../icon/close.svg"
+import {infoIcon, successIcon, warningIcon, errorIcon, closeIcon} from "../icon/icon.js"
 import {makeIcon, mount, remove, makeUUID, makeSpan, makeContainer, removeById} from "./common"
 const containerId = makeUUID()
 let lastUUID = null
@@ -29,10 +25,10 @@ const makeNotification = ( svg, title, content, delay) => {
     const topDom = document.createElement("div")
     topDom.classList.add("msg_topDom")
     const topSpan = makeSpan(title, "msg_topTitle")
-    const closeIcon = makeIcon(closeSvg,"msg_closeIcon")
+    const topClose = makeIcon(closeIcon,"msg_closeIcon")
     
     topDom.append(topSpan)
-    topDom.appendChild(closeIcon)
+    topDom.appendChild(topClose)
     const bottomDom = document.createElement("div")
     bottomDom.classList.add("msg_bottomDom")
     const bottomSpan = makeSpan(content, "msg_bottom_content")
@@ -42,7 +38,7 @@ const makeNotification = ( svg, title, content, delay) => {
     div.appendChild(contentDom)
     lastUUID = uuid
     mount(div, lastUUID, containerDom)
-    addEvent(closeIcon, div)
+    addEvent(topClose, div)
     remove(div, containerDom, delay)
 }
 
@@ -54,22 +50,22 @@ const addEvent = (icon, child) => {
 
 function info(option={}){
     const {title="系统提示", content="这是普通提示！", delay= 3000} = option
-    makeNotification(infoSvg, title, content, delay)
+    makeNotification(infoIcon, title, content, delay)
 }
 
 function success(option={}){
     const {title="系统提示", content="这是成功提示！", delay= 3000} = option
-    makeNotification(successSvg, title, content, delay)
+    makeNotification(successIcon, title, content, delay)
 }
 
 function warning(option={}){
     const {title="系统提示", content="这是警告提示！", delay= 3000} = option
-    makeNotification(warningSvg, title, content, delay)
+    makeNotification(warningIcon, title, content, delay)
 }
 
 function error(option={}){
     const {title="系统提示", content="这是错误提示！", delay= 3000} = option
-    makeNotification(errorSvg, title, content, delay)
+    makeNotification(errorIcon, title, content, delay)
 }
 
 function plain(option={}){

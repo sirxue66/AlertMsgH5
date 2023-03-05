@@ -1,9 +1,6 @@
 import "../css/alert.css"
 import "../css/global.css"
-import solidInfo from "../icon/solid_info.svg"
-import solidSuccess from "../icon/solid_success.svg"
-import solidWarning from "../icon/solid_warning.svg"
-import solidError from "../icon/solid_error.svg"
+import {solidInfoIcon, solidSuccessIcon, solidWarningIcon, solidErrorIcon} from "../icon/icon.js"
 import {makeIcon, mount, remove, makeUUID, makeSpan, makeContainer} from "./common"
 const containerId = makeUUID()
 let lastUUID = null
@@ -25,23 +22,23 @@ const makeAlert = (className, svg, content, delay) => {
 }
 
 function info(content="普通提示", delay){
-    makeAlert("msg_infoBox", solidInfo, content,delay)
+    makeAlert("msg_infoBox", solidInfoIcon, content,delay)
 }
 
 function success(content="成功提示", delay){
-    makeAlert("msg_successBox", solidSuccess, content,delay)
+    makeAlert("msg_successBox", solidSuccessIcon, content,delay)
 }
 
 function warning(content="警告提示", delay){
-    makeAlert("msg_warningBox", solidWarning, content,delay)
+    makeAlert("msg_warningBox", solidWarningIcon, content,delay)
 }
 
 function error(content="错误提示", delay){
-    makeAlert("msg_errorBox", solidError, content,delay)
+    makeAlert("msg_errorBox", solidErrorIcon, content,delay)
 }
 
 function plain(content="简洁提示", delay){
-    makeAlert("msg_plainBox", solidInfo, content, delay)
+    makeAlert("msg_plainBox", solidInfoIcon, content, delay)
 }
 
 const alert = {

@@ -1,6 +1,6 @@
 import "../css/global.css"
 import "../css/confirm.css"
-import warning from "../icon/warning.svg"
+import {warningIcon} from "../icon/icon.js"
 import { makeIcon} from "./common.js"
 const makeMask = (mask = true) => {
     const maskDom = document.createElement("div")
@@ -29,7 +29,7 @@ function open(option = {}){
     const topMain = document.createElement("div")
     topMain.classList.add("msg_topMain")
     const iconDom = document.createElement("div")
-    const icon = makeIcon(warning, "msg_confirmIcon")
+    const icon = makeIcon(warningIcon, "msg_confirmIcon")
     iconDom.appendChild(icon)
     const contentDom = document.createElement("div")
     contentDom.classList.add("msg_textContent")
