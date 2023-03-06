@@ -10,8 +10,8 @@
 }
 .msg_alertBox{
     position: relative;
-    min-height: 20px;
-    width: 300px;
+    min-height: 26px;
+    width: 330px;
     font-size: 14px;
     display: flex;
     align-items: start;
@@ -21,7 +21,9 @@
 }
 .msg_alertSpan{
     display: inline-block;
-    max-width: 260px;
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 26px;
     word-wrap: normal;
     word-break: break-all;
     white-space: normal;
@@ -49,7 +51,7 @@
 .msg_alertIcon{
     height: var(--minH);
     width: var(--minW);
-    margin: 0 5px;
+    margin: 4px 6px;
 }
 
 

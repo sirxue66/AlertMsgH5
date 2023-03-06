@@ -25,7 +25,7 @@ module.exports = (env, params) => {
         plugins: mode === "production" ? [] : [
             new HtmlWebpackPlugin({
                 title: "AlertMsgH5",
-                template: "./index.html"
+                template: "./test.html"
             })
         ],
         module: {

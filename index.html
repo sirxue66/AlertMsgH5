@@ -23,28 +23,63 @@
     <button id="open">弹框</button>
 </body>
 
-<!-- ----------------------------- -->
-<!-- <script src="./build/alertmsgh5.min.js"></script>
+<script src="./build/alertmsgh5.min.js"></script>
 <script>
-    console.log(window.AlertMsgH5)
     AlertMsgH5.creatMSG("$ALERTMSG") //挂载组件
     console.log(window)
-    const {success, info, warning, error, plain} = $ALERTMSG.alert
+
+    const {info, success, warning, error, plain} = $ALERTMSG.alert
+    const {notification} = $ALERTMSG
     const {open} = $ALERTMSG.confirm
-    document.getElementById("info").onclick = () => {
-        info()
-    }
-    document.getElementById("success").onclick = () => {
-        success()
-    }
-    document.getElementById("warning").onclick = () => {
+    document.querySelector("#info").addEventListener("click", () => {
+        info("这是alert消息提示组件！！！", 5000)
+    })
+    document.querySelector("#success").addEventListener("click", () => {
+        success("这是alert消息提示组件！！！这是alert消息提示组件！！！这是alert消息提示组件！！！这是alert消息提示组件！！！")
+    })
+    document.querySelector("#warning").addEventListener("click", () => {
         warning()
-    }
-    document.getElementById("error").onclick = () => {
+    })
+    document.querySelector("#error").addEventListener("click", () => {
         error()
-    }
-    document.getElementById("plain").onclick = () => {
+    })
+    document.querySelector("#plain").addEventListener("click", () => {
         plain()
-    }
-</script> -->
+    })
+
+    document.querySelector("#infoC").addEventListener("click", () => {
+        notification.info()
+    })
+    document.querySelector("#successC").addEventListener("click", () => {
+        notification.success({
+            title: "系统提示",
+            content: "成功！！！",
+            delay: 3000
+        })
+    })
+    document.querySelector("#warningC").addEventListener("click", () => {
+        notification.warning()
+    })
+    document.querySelector("#errorC").addEventListener("click", () => {
+        notification.error({
+            title: "系统提示",
+            content: "这是Notificatrion系统提示组件，提示您的系统出现错误信息，请检查！！！",
+            delay: 5000
+        })
+    })
+    document.querySelector("#plainC").addEventListener("click", () => {
+        notification.plain()
+    })
+
+    document.querySelector("#open").addEventListener("click", () => {
+        open({
+            mask: true,
+            content: "这是AlertMsgH5组件，消息提示框！！！",
+            btnOK: "OK",
+            btnCancel: "Cancel",
+            OKFun: () => {console.log("你点击了确定按钮！")},
+            CancelFun: () => {console.log("您点击了取消按钮！")}
+        })
+    })
+</script>
 </html>

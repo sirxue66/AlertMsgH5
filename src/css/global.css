@@ -84,8 +84,8 @@
   }
   @-webkit-keyframes slide-left {
     0% {
-      -webkit-transform: translateX(320px);
-              transform: translateX(320px);
+      -webkit-transform: translateX(340px);
+              transform: translateX(340px);
     }
     100% {
       -webkit-transform: translateX(0);
@@ -94,8 +94,8 @@
   }
   @keyframes slide-left {
     0% {
-      -webkit-transform: translateX(320px);
-              transform: translateX(320px);
+      -webkit-transform: translateX(340px);
+              transform: translateX(340px);
     }
     100% {
       -webkit-transform: translateX(0px);
@@ -108,8 +108,8 @@
               transform: translateX(0);
     }
     100% {
-      -webkit-transform: translateX(320px);
-              transform: translateX(320px);
+      -webkit-transform: translateX(340px);
+              transform: translateX(340px);
     }
   }
   @keyframes slide-right {
@@ -118,7 +118,7 @@
               transform: translateX(0);
     }
     100% {
-      -webkit-transform: translateX(320px);
-              transform: translateX(320px);
+      -webkit-transform: translateX(340px);
+              transform: translateX(340px);
     }
   }
