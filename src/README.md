@@ -4,12 +4,13 @@
 ***项目依赖浏览器，不可脱离window环境，因为组件都是直接挂载到window上边的，一处挂载，全局使用***
 ***本组件适合于一些封装库、或者不需要大量使用UI却需要进行消息提示的项目使用***
 ***组件库 提供alert消息提示、confirm消息确认、notification通知提示三种组件***
-***原生开发请前往[仓库](https://github.com/sirxue66/AlertMsgH5.git)使用打包后的文件，npm下载使用，请确保您的项目使用了css-loader和style-loader来处理css，***
+***原生开发请前往[仓库](https://github.com/sirxue66/AlertMsgH5)使用打包后的文件，npm下载使用，请确保您的项目使用了css-loader和style-loader来处理css，***
 ***
 
-[在线预览](http://localhost/)
+[在线预览](https://sirxue66.github.io/AlertMsgH5/)
 
-[git仓库](https://github.com/sirxue66/AlertMsgH5.git)
+[git仓库](https://github.com/sirxue66/AlertMsgH5/tree/main/src)
+[gitee仓库](https://gitee.com/post-man/alert-msg-h5/tree/main/src)
 
 ### Alert
 ***分开传参***

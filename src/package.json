@@ -1,0 +1,27 @@
+{
+  "name": "alertmsgh5",
+  "version": "1.0.0",
+  "description": "轻量级的一个消息提示组件，纯JS编写，开箱即用",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sirxue66/AlertMsgH5/tree/main/src"
+  },
+  "homepage": "https://sirxue66.github.io/AlertMsgH5/",
+  "keywords": [
+    "alert",
+    "confirm",
+    "notification",
+    "轻量级",
+    "无视图依赖",
+    "开箱即用"
+  ],
+  "author": "XCC",
+  "license": "ISC"
+}
